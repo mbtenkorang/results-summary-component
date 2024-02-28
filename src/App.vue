@@ -1,0 +1,42 @@
+<script setup>
+import { ref, reactive, onMounted, watch } from 'vue';
+import HeadingComponent from "./components/HeadingComponent.vue"
+import ButtonComponent from './components/ButtonComponent.vue';
+import ListItemComponent from './components/ListItemComponent.vue';
+
+const _data = ref([])
+const _averagescore = ref(0)
+const _linkdata = reactive({
+    _linktext: "Continue",
+    _linkurl: "#"
+})
+
+const fetchData = async () => {
+    try {
+        const response = await fetch("./assets/data.json");
+        const jsonData = await response.json();
+        _data.value = jsonData;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+onMounted(() => fetchData())
+
+watch(_data, (newValue, _data) => {
+    let totalScore = newValue.map(el => el.score).reduce((a, c) => a + c, 0)
+    return _averagescore.value = Math.round(totalScore / newValue.length)
+})
+
+</script>
+
+<template>
+    <HeadingComponent :average_score="_averagescore" />
+    <h1>Summary</h1>
+    <div>
+        <ul>
+            <ListItemComponent :summary_details="_data" />
+        </ul>
+    </div>
+    <ButtonComponent :link_label="_linkdata._linktext" :link_url="_linkdata._linkurl" />
+</template>
