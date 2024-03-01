@@ -4,6 +4,7 @@ import HeadingComponent from "./components/HeadingComponent.vue"
 import ButtonComponent from './components/ButtonComponent.vue';
 import ListItemComponent from './components/ListItemComponent.vue';
 
+const _isloading = ref(true)
 const _data = ref([])
 const _averagescore = ref(0)
 const _linkdata = reactive({
@@ -16,6 +17,7 @@ const fetchData = async () => {
         const response = await fetch("./assets/data.json");
         const jsonData = await response.json();
         _data.value = jsonData;
+        _isloading.value = false;
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -31,12 +33,17 @@ watch(_data, (newValue, _data) => {
 </script>
 
 <template>
-    <HeadingComponent :average_score="_averagescore" />
-    <h1>Summary</h1>
-    <div>
-        <ul>
-            <ListItemComponent :summary_details="_data" />
-        </ul>
+    <div role="banner">
+        <HeadingComponent :average_score="_averagescore" />
     </div>
-    <ButtonComponent :link_label="_linkdata._linktext" :link_url="_linkdata._linkurl" />
+    <main>
+        <h1>Summary</h1>
+        <div>
+            <h3 v-if="_isloading">Loading ... </h3>
+            <ul v-else>
+                <ListItemComponent :summary_details="_data" />
+            </ul>
+        </div>
+        <ButtonComponent :link_label="_linkdata._linktext" :link_url="_linkdata._linkurl" />
+    </main>
 </template>

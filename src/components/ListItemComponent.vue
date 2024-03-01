@@ -5,18 +5,18 @@ const props = defineProps({
 </script>
 
 <template>
-    <li v-for="item in summary_details" :key="item.id">
-        <div>
-            <div>
+    <li v-for="item in summary_details" :key="item.category">
+        <div class="flex justify-between">
+            <div class="flex ">
                 <span>
                     <img :src="item.icon" alt="" aria-hidden="true">
                 </span>
-                <h2>{{ item.category }}</h2>
+                <h3>{{ item.category }}</h3>
             </div>
-            <p>
-                <span>{{ item.score }}</span> / <span>100</span>
+            <p class="font-bold">
+                <span class="text-neutral-gray-blue">{{ item.score }}</span> / <span
+                    class="text-neutral-pale-blue">100</span>
             </p>
         </div>
-
     </li>
 </template>

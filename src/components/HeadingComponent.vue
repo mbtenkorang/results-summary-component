@@ -2,7 +2,7 @@
 const props = defineProps({
     average_score: {
         type: Number,
-        required: true
+        default: 0
     }
 })
 </script>
@@ -16,9 +16,8 @@ const props = defineProps({
             <span>of 100</span>
         </div>
         </p>
-
+        <p>Great</p>
         <p>
-            <span>Great</span>
             You scored higher than 65% of the people who have taken these tests.
         </p>
     </div>
