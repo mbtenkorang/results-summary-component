@@ -7,11 +7,11 @@ const props = defineProps({
 <template>
     <li v-for="item in summary_details" :key="item.category">
         <div class="flex justify-between">
-            <div class="flex ">
+            <div class="flex items-center">
                 <span>
                     <img :src="item.icon" alt="" aria-hidden="true">
                 </span>
-                <h3>{{ item.category }}</h3>
+                <h2 class="text-lg font-extrabold">{{ item.category }}</h2>
             </div>
             <p class="font-bold">
                 <span class="text-neutral-gray-blue">{{ item.score }}</span> / <span

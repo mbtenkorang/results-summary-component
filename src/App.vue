@@ -33,11 +33,10 @@ watch(_data, (newValue, _data) => {
 </script>
 
 <template>
-    <div role="banner">
-        <HeadingComponent :average_score="_averagescore" />
-    </div>
+
+    <HeadingComponent :average_score="_averagescore" />
     <main>
-        <h1>Summary</h1>
+        <h1 class="text-lg font-extrabold">Summary</h1>
         <div>
             <h3 v-if="_isloading">Loading ... </h3>
             <ul v-else>
@@ -46,4 +45,5 @@ watch(_data, (newValue, _data) => {
         </div>
         <ButtonComponent :link_label="_linkdata._linktext" :link_url="_linkdata._linkurl" />
     </main>
+
 </template>
