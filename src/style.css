@@ -6,3 +6,23 @@
     font-family: "Hanken Grotesk";
     src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
 }
+
+li {
+    @apply first:mb-0 last:mt-0 last:mb-6 my-4 py-4 px-5 rounded-xl
+}
+
+li:nth-child(1) {
+    @apply bg-primary-light-red/15 text-primary-light-red/75
+}
+
+li:nth-child(2) {
+    @apply bg-primary-orange-yellow/15 text-primary-orange-yellow/75
+}
+
+li:nth-child(3) {
+    @apply bg-primary-green-teal/10 text-primary-green-teal/85
+}
+
+li:nth-child(4) {
+    @apply bg-primary-cobalt-blue/10 text-primary-cobalt-blue/75
+}
