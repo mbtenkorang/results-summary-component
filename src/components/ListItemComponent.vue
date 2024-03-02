@@ -1,6 +1,9 @@
 <script setup>
 const props = defineProps({
-    summary_details: Object
+    summary_details: {
+        type: Object,
+        required: true
+    }
 })
 </script>
 
@@ -8,14 +11,14 @@ const props = defineProps({
     <li v-for="item in summary_details" :key="item.category">
         <div class="flex justify-between">
             <div class="flex items-center">
-                <span>
+                <span class="mr-2">
                     <img :src="item.icon" alt="" aria-hidden="true">
                 </span>
-                <h2 class="text-lg font-extrabold">{{ item.category }}</h2>
+                <h2 class="text-lg font-medium" :id="item.category.toLowerCase()">{{ item.category }}</h2>
             </div>
-            <p class="font-bold">
-                <span class="text-neutral-gray-blue">{{ item.score }}</span> / <span
-                    class="text-neutral-pale-blue">100</span>
+            <p class="font-extrabold">
+                <span class="text-neutral-gray-blue">{{ item.score }}</span>
+                <span class="text-neutral-gray-blue/50"> / 100</span>
             </p>
         </div>
     </li>
