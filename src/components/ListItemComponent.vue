@@ -14,9 +14,9 @@ const props = defineProps({
                 <span class="mr-2">
                     <img :src="item.icon" alt="" aria-hidden="true">
                 </span>
-                <h2 class="text-lg font-medium" :id="item.category.toLowerCase()">{{ item.category }}</h2>
+                <h2 class="text-lg font-medium lg:text-xl" :id="item.category.toLowerCase()">{{ item.category }}</h2>
             </div>
-            <p class="font-extrabold">
+            <p class="font-extrabold lg:text-xl">
                 <span class="text-neutral-gray-blue">{{ item.score }}</span>
                 <span class="text-neutral-gray-blue/50"> / 100</span>
             </p>

@@ -35,14 +35,12 @@ watch(_data, (newValue, _data) => {
 <template>
 
     <HeadingComponent :average_score="_averagescore" />
-    <main class="mx-8 my-6">
-        <h1 class="text-lg font-extrabold text-neutral-gray-blue">Summary</h1>
-        <div>
-            <h3 v-if="_isloading" class="text-neutral-palu-blue">Loading ... </h3>
-            <ul v-else>
-                <ListItemComponent :summary_details="_data" />
-            </ul>
-        </div>
+    <main class="mx-8 my-6 md:my-10 md:mx-8  md:flex md:flex-col md:justify-around">
+        <h1 class=" text-lg font-extrabold text-neutral-gray-blue lg:text-2xl">Summary</h1>
+        <p v-if="_isloading" class="text-neutral-dark-blue text-3xl">Loading ... </p>
+        <ul v-else>
+            <ListItemComponent :summary_details="_data" />
+        </ul>
         <ButtonComponent :link_label="_linkdata._linktext" :link_url="_linkdata._linkurl" />
     </main>
 
