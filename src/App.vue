@@ -37,7 +37,7 @@ watch(_data, (newValue, _data) => {
     <HeadingComponent :average_score="_averagescore" />
     <main class="mx-8 my-6 md:my-10 md:mx-8  md:flex md:flex-col md:justify-around">
         <h1 class=" text-lg font-extrabold text-neutral-gray-blue lg:text-2xl">Summary</h1>
-        <p v-if="_isloading" class="text-neutral-dark-blue text-xl text-center">Loading ... </p>
+        <p v-if="_isloading" class="text-neutral-dark-blue text-base text-center">Loading ... </p>
         <ul v-else>
             <ListItemComponent :summary_details="_data" />
         </ul>
