@@ -10,9 +10,9 @@ const props = defineProps({
 <template>
     <div role="banner"
         class="px-6 py-6 text-lg flex flex-col items-center text-neutral-white border-b border-neutral-lavender rounded-b-[3rem] bg-gradient-to-b from-gradient-slate-blue from-5% to-gradient-royal-blue md:rounded-3xl md:justify-evenly">
-        <h1 class="lg:text-2xl font-extrabold">Your Result</h1>
+        <h1 class="text-xl lg:text-2xl font-extrabold">Your Result</h1>
         <div
-            class="text-center my-4 px-8 py-6  border-neutral-pale-blue rounded-full bg-gradient-to-b from-gradient-violet-blue from-10% to-gradient-persian-blue md:py-14 md:px-16">
+            class="text-center my-4 px-14 py-12  border-neutral-pale-blue rounded-full bg-gradient-to-b from-gradient-violet-blue from-10% to-gradient-persian-blue md:py-14 md:px-16">
             <p class="flex flex-col items-center">
                 <span class="text-6xl font-extrabold md:text-7xl">{{ average_score }}</span>
                 <span>of 100</span>
