@@ -53,7 +53,7 @@ The following CSS psuedo-class for targetting list items:
 }
 ```
 
-Use [nth-child pusedo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) to visit the reference information on [MDN](https://developer.mozilla.org/en-US/)
+Use [nth-child psuedo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) to visit the reference information on [MDN](https://developer.mozilla.org/en-US/)
 
 ## Author
 
