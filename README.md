@@ -41,7 +41,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [VueJS](https://vuejs.org/) - JS Progressive Framework
-- [Tailwindcss](https://tailwindcss.com/) - Fro styling
+- [Tailwindcss](https://tailwindcss.com/) - For styling
 - [Vite](https://vitejs.dev/) - For bundling
 
 ### What I learned
