@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div role="banner"
+    <div
         class="px-6 py-6 text-lg flex flex-col items-center text-neutral-white border-b border-neutral-lavender rounded-b-[3rem] bg-gradient-to-b from-gradient-slate-blue from-30% to-gradient-royal-blue md:rounded-3xl md:justify-evenly">
         <h1 class="text-xl lg:text-2xl font-extrabold">Your Result</h1>
         <div
